@@ -1,0 +1,236 @@
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)),url(./img/fondo-portfolio.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+#sobremi{
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 15px;
+    color: #111135;
+    display: flex;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+#sobremi .contenedor-foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sobremi .contenedor-foto img{
+    padding: 15px;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: #f3f3f3;
+}
+#sobremi .sobremi{
+    margin: 0 40px;
+}
+#sobremi .sobremi .titulo-seccion{
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #111135;
+    text-decoration: underline;
+    text-decoration-color: #d3d3d3;
+    text-decoration-thickness: 5px;
+}
+#sobremi .sobremi h2{
+    font-size: 34px;
+    font-weight: bold;
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+#sobremi .sobremi h2 span{
+    color:rgb(171, 1, 183);
+}
+
+
+#sobremi .sobremi p{
+    font-size: 17px;
+    line-height: 25px;
+    color: #565656;
+    margin-bottom: 12px;
+}
+/*
+#sobremi .sobremi a{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    margin-top: 30px;
+    transition: .5s;
+}
+#sobremi .sobremi a:hover{
+   background-color: rgb(171, 1, 183);
+   color: #fff;
+}*/
+
+ul{
+    padding: 0;
+    position: relative;
+    display: flex;
+    gap: 25px;
+}
+ul li{
+    position: relative;
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: .5s;
+    border:1px solid #777;
+}
+ul li:hover{
+    width: 180px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0);
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    background: linear-gradient(45deg, var(--i),var(--j));
+    opacity: 0;
+    transition: .5s;
+}
+ul li:hover::before{
+    opacity: 1;
+}
+ul li::after{
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 60px;
+    background: linear-gradient(45deg, var(--i),var(--j));
+    opacity: 0;
+    transition: .5s;
+    z-index: -1;
+    filter: blur(15px);
+}
+
+ul li:hover::after{
+    opacity: .5;
+}
+
+ul li img{
+    
+    transition: .5s;
+    transition-delay: .25s;
+}
+
+ul li:hover img{
+    transform: scale(0);
+    transition-delay: .1s;
+}
+ul li span{
+    position: absolute;
+}
+ul li .titulo{
+    color: #FFF;
+    font-size: 1.1em !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transform: scale(0);
+    transition: .5s;
+    transition-delay: 0s;
+}
+ul li:hover .titulo{
+    transform: scale(1);
+    transition-delay: .25s;
+}
+
+@media screen and (max-width:1133px) {
+    .redes{
+        display: none;
+    }
+    nav{
+        display: none;
+    }
+    nav.responsive{
+        display: block;
+        background-color: rgba(0,0,0,0.8);
+        width: 100%;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        padding: 10px 0;
+    }
+    nav.responsive ul{
+        display: block !important;
+        text-align: center;
+    }
+    nav.responsive ul li{
+        margin: 5px 0;
+    }
+    #icono-nav{
+        display: block;
+    }
+    #inicio .contenido .presentacion h2{
+        font-size: 40px;
+    }
+    #sobremi{
+        padding: 50px 0;
+        display: block;
+    }
+    #sobremi .contenedor-foto{
+        max-width: 150px;
+        margin: auto;
+    }
+    #sobremi .contenedor-foto img{
+        padding: 8px;
+    }   
+    #sobremi .sobremi .titulo-seccion{
+        text-align: center;
+    }
+    #sobremi .sobremi h2{
+        font-size: 25px;
+        text-align: center;
+    }
+    #portfolio{
+        padding: 50px 0;
+    }
+    #portfolio .fila{
+        display: block;
+    }
+    #portfolio .fila .proyecto{
+        margin: 10px auto;
+    }
+    #contacto{
+        padding: 50px 15px;
+    }
+    #contacto .contenedor-form .mitad{
+        margin-bottom: 15px;
+        display: block;
+    }
+    #contacto .contenedor-form .mitad input{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+   
+
+}
+@media screen and (max-width:450px){
+    ul{
+        flex-direction: column;
+    }
+
+}
